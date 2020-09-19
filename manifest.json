@@ -1,0 +1,17 @@
+{
+  "manifest_version": 2,
+
+  "name": "Webull: Show aggregate/average price of all filled BUY orders and SELL orders per Symbol per day",
+  "description": "When viewing orders ('Today's Orders' or 'Order History'), this extension will automatically add an aggregate summary of all filled BUY orders & SELL orders per Symbol per day above the data table",
+  "version": "0.1",
+
+  "content_scripts": [
+    {
+      "matches": ["https://app.webull.com/account"],
+      "run_at": "document_idle",
+      "js": ["content-script.js"]
+    }
+  ],
+  "permissions": [
+  ]
+}
